@@ -5,8 +5,6 @@ import { useNavigate } from "react-router-dom";
 const Posts = () => {
   const [posts, setPosts] = useState([]);
 
-  console.log({ posts });
-
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -29,7 +27,7 @@ const Posts = () => {
   return (
     <>
       <p
-        className="py-2 text-end text-xl text-blue-700"
+        className="cursor-pointer py-2 text-end text-xl text-blue-700"
         onClick={() => {
           navigate("/");
         }}
@@ -53,7 +51,7 @@ const Posts = () => {
           </svg>
         </div>
       </p>
-      <div className="posts-container">
+      <div className="posts-container grid gap-4 p-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((item) => (
           <PostCard post={item} key={item?.id} />
         ))}

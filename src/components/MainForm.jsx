@@ -62,7 +62,7 @@ const MainForm = () => {
   return (
     <>
       <div className="flex justify-around border-b-orange-800 pb-2">
-        {[1, 2, 3]?.map((item, index) => {
+        {[1, 2, 3]?.map((item) => {
           return (
             <button
               key={item}
